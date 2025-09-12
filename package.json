@@ -1,12 +1,8 @@
 {
   "name": "vite-react-typescript-starter",
-  "version": "0.0.0",
   "private": true,
-  "description": "",
-  "license": "ISC",
-  "author": "",
+  "version": "0.0.0",
   "type": "module",
-  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
