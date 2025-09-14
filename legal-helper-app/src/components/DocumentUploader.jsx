@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Upload, File, X, CheckCircle, AlertCircle } from 'lucide-react';
+import { API_ENDPOINTS } from '../config/api';
 
 export const DocumentUploader = ({ onDocumentUpload, onClausesExtracted }) => {
   const [isDragOver, setIsDragOver] = useState(false);
@@ -47,7 +48,7 @@ export const DocumentUploader = ({ onDocumentUpload, onClausesExtracted }) => {
       try {
         // Process summary first
         console.log('🔄 Starting document summary processing...');
-        const summaryResponse = await fetch('http://localhost:3001/api/simplify-text', {
+        const summaryResponse = await fetch(API_ENDPOINTS.SIMPLIFY_TEXT, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -68,7 +69,7 @@ export const DocumentUploader = ({ onDocumentUpload, onClausesExtracted }) => {
 
         // Process clauses second
         console.log('🔄 Starting clause extraction...');
-        const clausesResponse = await fetch('http://localhost:3001/api/extract-clauses', {
+        const clausesResponse = await fetch(API_ENDPOINTS.EXTRACT_CLAUSES, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

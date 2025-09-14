@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 
 dotenv.config({ path: join(__dirname, '.env') });
 
-const keyFilename = join(__dirname, "..", "keys", "text-simplifier-471608-761513707aff.json"); 
+const keyFilename = join(__dirname, "..", "keys", "my_key.json"); 
 // 👆 make sure your JSON key is in /keys/service-account.json
 
 // Set the environment variable for authentication
